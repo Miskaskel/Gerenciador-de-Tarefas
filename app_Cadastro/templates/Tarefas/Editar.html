@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% block conteudo %}
+    <div>
+        <form class="fc" action="{% url 'Editar' data.id_tarefa %}" method="post"> 
+            {% csrf_token %}
+            <label for="exampleInputEmail1" class="form-label">Nome Tarefa:</label>
+            <input type="text" class="form-control" value="{{data.nome}}" name="NomeTarefa" aria-describedby="emailHelp">
+            
+            
+            <label for="exampleInputPassword1" class="form-label">Descricao Tarefa:</label>
+            <input type="text" class="form-control" value="{{data.Descricao}}" name="DescriTarefa">
+            
+            <label for="exampleInputPassword1" class="form-label">Prioridade:</label>
+            <input type="number" class="form-control" value="{{data.Prioridade}}" name="PrioridadeTarefa">
+            
+            <label for="exampleInputPassword1" class="form-label">Categoria:</label>
+            <input type="text" class="form-control" value="{{data.Categoria}}" name="CategoriaTarefa">
+               
+            <button type="submit" class="btn btn-primary">Editar</button>
+        </form>
+    </div>    
+{% endblock %}
