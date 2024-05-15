@@ -1,4 +1,4 @@
-Gerenciador de Tarefas
+###Gerenciador de Tarefas
 
 Esse foi um projeto da faculdade no qual a linguagem principal foi Python e Django
 
